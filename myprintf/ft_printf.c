@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 15:30:48 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/06 15:41:10 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/06 18:46:22 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	ft_length(char ch, va_list list)
 	else if (ch == 'u')
 		length += ft_unslen(va_arg(list, int));
 	else if (ch == 'x')
-		length += ft_hexa(va_arg(list, unsigned int));
+		length += ft_hexa(va_arg(list, unsigned int), 0);
 	else if (ch == 'X')
-		length += ft_hexa(va_arg(list, unsigned int));
+		length += ft_hexa(va_arg(list, unsigned int), 1);
 	else
 		length += ft_putchar(ch);
 	return (length);
@@ -62,13 +62,15 @@ int	ft_printf(const char *st, ...)
 	return (tot_len);
 }
 
-int main(void)
+int	main(void)
 {
 	// int i = 0;
 	// i = ft_printf("%s %d hello %p", "world", 123, 142253697);
 	//printf("\n%d\n", ft_printf("%%%));
 	//ft_printf("%s %d hello %d", "world", 123, 142253697);
 	//ft_printf("%010p\n", 0x1);
+
+	
 	int test = 41;
 	ft_printf("pointer:                 %p\n", test);
 }
