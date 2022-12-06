@@ -1,5 +1,18 @@
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/27 14:40:48 by anreyes           #+#    #+#             */
+/*   Updated: 2022/11/27 14:40:48 by anreyes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+
+#include "ft_printf.h"
+pri/ft_printf.h
 int	ft_check(char c, va_list arg)
 {
 	int	p;
@@ -62,5 +75,8 @@ int main(void)
 {
 	// int i = 0;
 	// i = ft_printf("%s %d hello %p", "world", 123, 142253697);
-	printf("\n%d\n", ft_printf("%s %d hello %p", "world", 123, 142253697));
+	//printf("\n%d\n", ft_printf("%s %d hello %p", "world", 123, 142253697));
+	ft_printf("%x\n", 1230);
+	ft_printf("hex upper:               %X\n", 0xabcf012);
+
 }

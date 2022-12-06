@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:18:39 by anreyes           #+#    #+#             */
-/*   Updated: 2022/11/24 17:00:02 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/06 15:40:05 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
+// int	ft_putchar(int c)
+// {
+// 	write(1, &c, 1);
+// 	return (1);
+// }
 
 void	ft_putnbr(int nb)
 {
@@ -34,7 +34,7 @@ void	ft_putnbr(int nb)
 		nb = -nb;
 		ft_putnbr(nb);
 	}
-	else if (nb > 9)
+	else if (nb >= 9)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
@@ -43,14 +43,14 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + 48);
 }
 
-int	ft_len(int i)
+int	ft_intlen(int i)
 {
 	int	len;
 
 	ft_putnbr(i);
 	if (i <= 0)
 		len = 1;
-	else 
+	else
 		len = 0;
 	while (i)
 	{
@@ -60,9 +60,7 @@ int	ft_len(int i)
 	return (len);
 }
 
-#include <unistd.h>
-#include <stdio.h>
-int	main(void)
-{
-	printf("\n%d\n",ft_len(-421));
-}
+// int	main(void)
+// {
+// 	printf("\n%d\n",ft_len(421));
+// }

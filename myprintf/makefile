@@ -2,8 +2,9 @@ NAME	= libftprintf.a
 cc		=	 gcc
 CFLAGS	= -Wall -Wextra -Werror 
 
-SRCS	= ft_printf.c ft_functions01.c ft_functions02.c
-
+SRCS	= ft_printf.c ft_hexa.c ft_intlen.c ft_pointer.c ft_putchar.c\
+			ft_putstr.c ft_unslen.c\
+			
 OBJS	= $(SRCS:.c=.o)
 
 $(NAME): ${OBJS}

@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 15:08:45 by anreyes           #+#    #+#             */
-/*   Updated: 2022/11/25 15:26:18 by anreyes          ###   ########.fr       */
+/*   Created: 2022/11/30 15:58:16 by anreyes           #+#    #+#             */
+/*   Updated: 2022/12/06 15:25:00 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-int	ft_putstr (char *c)
+// int	ft_putchar(char c)
+// {
+// 	write(1, &c, 1);
+// 	return (1);
+// }
+#include "ft_printf.h"
+
+int	ft_hexa(unsigned int x, int b)
 {
 	int	i;
+
 	i = 0;
-	
-	while (c[i] != '\0')
+	if (x >= 16)
+		i += ft_hexa(x / 16, b);
+	if ((x % 16) < 10)
+		i += ft_putchar((x % 16) + '0');
+	else
 	{
-		write (1, &c[i], 1);
-		i++;	
+		if (b == 0)
+			i += ft_putchar((x % 16) + 87);
+		else
+			i += ft_putchar((x % 16) + 55);
 	}
-	return(i);
-	
+	return (i);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	printf ("%d\n", ft_putstr ("statement"));
-}
+// int	main(void)
+// {
+// 	int	test = 41;
+// 	printf("\n%s\n", ft_hexa(test));
+// }

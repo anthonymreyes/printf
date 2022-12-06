@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 16:52:17 by anreyes           #+#    #+#             */
-/*   Updated: 2022/11/25 14:04:46 by anreyes          ###   ########.fr       */
+/*   Created: 2022/11/24 15:05:30 by anreyes           #+#    #+#             */
+/*   Updated: 2022/11/28 15:18:24 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdint.h>
-# include <stdarg.h>
-# include <stdio.h>
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
-int		ft_putchar(int c);
-void	ft_putnbr(int nb);
-int		ft_putstr (char *c);
-
-#endif
+// int	main(void)
+// {
+// 	ft_putchar('a');
+// }
