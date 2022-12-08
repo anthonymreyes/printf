@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 16:52:17 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/06 15:55:45 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/08 19:51:31 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 int		ft_putchar(char c);
 int		ft_intlen(int i);
 int		ft_putstr(char *c);
-int		ft_hexa(unsigned int x, int b);
+int		ft_hexa(unsigned int i);
+int		ft_hexa_u(unsigned int i);
 int		ft_unslen(unsigned int i);
 void	ft_unsnbr(unsigned int nb);
 int		ft_pointer(unsigned long n);

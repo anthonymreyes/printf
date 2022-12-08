@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 15:30:48 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/06 18:46:22 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/08 19:52:38 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int	ft_length(char ch, va_list list)
 	else if (ch == 'd' || ch == 'i')
 		length += ft_intlen(va_arg(list, int));
 	else if (ch == 'u')
-		length += ft_unslen(va_arg(list, int));
+		length += ft_unslen(va_arg(list, unsigned int));
 	else if (ch == 'x')
-		length += ft_hexa(va_arg(list, unsigned int), 0);
+		length += ft_hexa(va_arg(list, unsigned int));
 	else if (ch == 'X')
-		length += ft_hexa(va_arg(list, unsigned int), 1);
+		length += ft_hexa_u(va_arg(list, unsigned int));
 	else
 		length += ft_putchar(ch);
 	return (length);
@@ -56,7 +56,7 @@ int	ft_printf(const char *st, ...)
 		}
 		else
 			tot_len += ft_putchar(st[i]);
-		i++;
+			i++;
 	}
 	va_end(list);
 	return (tot_len);
@@ -64,13 +64,15 @@ int	ft_printf(const char *st, ...)
 
 int	main(void)
 {
-	// int i = 0;
-	// i = ft_printf("%s %d hello %p", "world", 123, 142253697);
-	//printf("\n%d\n", ft_printf("%%%));
+	//int i = 0;
+	//ft_printf("%s %d hello %p", "world", 123, 142253697);
+	//printf("\n%d\n", ft_printf("%%%"));
 	//ft_printf("%s %d hello %d", "world", 123, 142253697);
 	//ft_printf("%010p\n", 0x1);
 
 	
-	int test = 41;
-	ft_printf("pointer:                 %p\n", test);
+	// int test = 41;
+	// ft_printf("pointer:                 %p\n", test);
+	ft_printf("hex lower:               %x\n", 0xabcf012);
+    ft_printf("hex upper:               %X\n", 0xabcf012);
 }

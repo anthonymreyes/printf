@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_hexa_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 15:05:30 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/07 15:57:17 by anreyes          ###   ########.fr       */
+/*   Created: 2022/12/08 19:48:41 by anreyes           #+#    #+#             */
+/*   Updated: 2022/12/08 19:49:35 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+void	ft_putnbr_uchex(unsigned int n)
 {
-	write(1, &c, 1);
-	return (1);
+	if (n / 16 > 0)
+	{
+		ft_putnbr_uchex(n / 16);
+	}
+	if ((n % 16) >= 10 && (n % 16) < 16)
+	{
+		ft_putchar((n % 16) + 55);
+	}
+	else
+		ft_putchar((n % 16) + 48);
 }
 
-// int	main(void)
-// {
-// 	ft_putchar('a');
-// }
+int	ft_hexa_u(unsigned int i)
+{
+	int				len;
+
+	len = 0;
+	ft_putnbr_uchex(i);
+	if (i == 0)
+		len = 1;
+	while (i)
+	{
+		i = i / 16;
+		len++;
+	}
+	return (len);
+}
