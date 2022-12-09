@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 15:30:48 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/08 19:52:38 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/09 15:25:24 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,23 +56,24 @@ int	ft_printf(const char *st, ...)
 		}
 		else
 			tot_len += ft_putchar(st[i]);
-			i++;
+		i++;
 	}
 	va_end(list);
 	return (tot_len);
 }
 
-int	main(void)
-{
-	//int i = 0;
-	//ft_printf("%s %d hello %p", "world", 123, 142253697);
-	//printf("\n%d\n", ft_printf("%%%"));
-	//ft_printf("%s %d hello %d", "world", 123, 142253697);
-	//ft_printf("%010p\n", 0x1);
-
-	
-	// int test = 41;
-	// ft_printf("pointer:                 %p\n", test);
-	ft_printf("hex lower:               %x\n", 0xabcf012);
-    ft_printf("hex upper:               %X\n", 0xabcf012);
-}
+// int	main(void)
+// {
+// // 	//int i = 0;
+// // 	//ft_printf("%s %d hello %p", "world", 123, 142253697);
+// // 	//printf("\n%d\n", ft_printf("%%%"));
+// // 	//ft_printf("%s %d hello %d", "world", 123, 142253697);
+// // 	//ft_printf("%010p\n", 0x1);
+// // ft_printf("%c - %s - %p %d - %i - %u - %x %X %%", 'b', 0, ((void *)0), 20, -20, -1, -1, 200000000);
+// 	// ft_printf("%i%i%i%i%i%i%i", 10, 23, -2, 37, 200, -9999, 977779);
+// 	ft_printf("%i%i", -9999, 977779);
+// // 	// int test = 41;
+// // 	// ft_printf("pointer:                 %p\n", test);
+// // 	ft_printf("hex lower:               %x\n", 123);
+// //     ft_printf("hex upper:               %X\n", 0xabcf012);
+// }

@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 16:52:17 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/08 19:51:31 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/09 16:26:51 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdarg.h>
 # include <stdio.h>
 
+int		ft_printf(const char *st, ...);
 int		ft_putchar(char c);
 int		ft_intlen(int i);
 int		ft_putstr(char *c);

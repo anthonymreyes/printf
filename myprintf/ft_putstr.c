@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:08:45 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/06 15:20:02 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/09 15:11:41 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putstr(char *c)
 	i = 0;
 	if (c == NULL)
 	{
-		write(1, "(null)", 1);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (c[i] != '\0')
