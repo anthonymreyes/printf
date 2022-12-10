@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:58:16 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/08 19:50:22 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/10 18:36:48 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,28 @@
 // }
 #include "ft_printf.h"
 
-void	ft_putnbr_lchex(unsigned int n)
+void	hexa_out(unsigned int n)
 {
-	if (n / 16 > 0)
+	if ((n / 16) > 0)
 	{
-		ft_putnbr_lchex(n / 16);
+		hexa_out(n / 16);
 	}
 	if ((n % 16) >= 10 && (n % 16) < 16)
 	{
 		ft_putchar((n % 16) + 87);
 	}
 	else
+	{
 		ft_putchar((n % 16) + 48);
+	}
 }
 
 int	ft_hexa(unsigned int i)
 {
-	int				len;
+	int	len;
 
 	len = 0;
-	ft_putnbr_lchex(i);
+	hexa_out(i);
 	if (i == 0)
 		len = 1;
 	while (i)
@@ -46,6 +48,35 @@ int	ft_hexa(unsigned int i)
 	}
 	return (len);
 }
+// void	ft_putnbr_lchex(unsigned int n)
+// {
+// 	if (n / 16 > 0)
+// 	{
+// 		ft_putnbr_lchex(n / 16);
+// 	}
+// 	if ((n % 16) >= 10 && (n % 16) < 16)
+// 	{
+// 		ft_putchar((n % 16) + 87);
+// 	}
+// 	else
+// 		ft_putchar((n % 16) + 48);
+// }
+
+// int	ft_hexa(unsigned int i)
+// {
+// 	int				len;
+
+// 	len = 0;
+// 	ft_putnbr_lchex(i);
+// 	if (i == 0)
+// 		len = 1;
+// 	while (i)
+// 	{
+// 		i = i / 16;
+// 		len++;
+// 	}
+// 	return (len);
+// }
 
 // int	ft_hexa(unsigned int x, int b)
 // {
