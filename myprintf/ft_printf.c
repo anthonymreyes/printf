@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_length(char ch, va_list list)
 {
@@ -62,18 +63,32 @@ int	ft_printf(const char *st, ...)
 	return (tot_len);
 }
 
-// int	main(void)
-// {
-// // // // 	//int i = 0;
-// // // // 	//ft_printf("%s %d hello %p", "world", 123, 142253697);
-// // // // 	//printf("\n%d\n", ft_printf("%%%"));
-// // // // 	//ft_printf("%s %d hello %d", "world", 123, 142253697);
-// // // // 	//ft_printf("%010p\n", 0x1);
-// // // 	// ft_printf("%i%i%i%i%i%i%i", 10, 23, -2, 37, 200, -9999, 977779);
-// // // 	ft_printf("%i%i", -9999, 977779);
-// // // // 	// int test = 41;
-// // // // 	// ft_printf("pointer:                 %p\n", test);
+int	main(void)
+{
+// 	int i = 0;
+//   int test = 142253697;
+//   i = printf("%s %d hello %p", "world", 123, (void *)&test);
+//   printf("\n");
+//   i = ft_printf("%s %d hello %p", "world", 123, (void *)&test);
+//   printf("\n");
+//   ft_printf("pointer:                 %p\n", (void *)&test);
+//   printf("pointer:                 %p\n", (void *)&test);
+//   ft_printf("hex upper:               %X\n", 0xabcf012);
+//   return 0;
+  //printf("%p", (void *)&test);
+	// int i = 0;
+	// i = ft_printf("%s %d hello %p", "world", 123, 142253697);
+	// i = printf("%s %d hello %p", "world", 123, 142253697);
+// // 	//printf("\n%d\n", ft_printf("%%%"));
+// // 	//ft_printf("%s %d hello %d", "world", 123, 142253697);
+// // // 	//ft_printf("%010p\n", 0x1);
+// // 	// ft_printf("%i%i%i%i%i%i%i", 10, 23, -2, 37, 200, -9999, 977779);
+// // 	ft_printf("%i%i", -9999, 977779);
+	// int test = 41;
+	// ft_printf("pointer:                 %p\n", test);
+	// printf("pointer:                 %p\n", test);
 
-// 	ft_printf("hex lower:               %x\n", 2000);
-// 	ft_printf("hex upper:               %X\n", 0xabcf012);
-// }
+	ft_printf("hex lower: %x\n", 2000);
+	ft_printf("hex lower:               %x\n", 2000);
+	ft_printf("hex upper:               %X\n", 0xabcf012);
+}

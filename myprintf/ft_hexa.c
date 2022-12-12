@@ -19,11 +19,17 @@
 
 void	hexa_out(unsigned int n)
 {
+	if (n == 0)
+	{
+		ft_putchar('0');
+		return;
+	}
 	if ((n / 16) > 0)
 	{
 		hexa_out(n / 16);
 	}
 	if ((n % 16) >= 10 && (n % 16) < 16)
+	//if ((n % 16) < 16)
 	{
 		ft_putchar((n % 16) + 87);
 	}

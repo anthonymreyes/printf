@@ -14,6 +14,11 @@
 
 void	hexa_u_out(unsigned int n)
 {
+	if (n == 0)
+	{
+		ft_putchar('0');
+		return;
+	}
 	if ((n / 16) > 0)
 	{
 		hexa_u_out(n / 16);

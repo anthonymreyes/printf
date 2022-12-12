@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/anthonyreyes/Desktop/printf/myprintf'
+gcc  -Wall -Wextra -Werror -g   -c -o ft_printf.o ft_printf.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_hexa.o ft_hexa.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_hexa_u.o ft_hexa_u.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_intlen.o ft_intlen.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_pointer.o ft_pointer.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_putchar.o ft_putchar.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_putstr.o ft_putstr.c
+gcc  -Wall -Wextra -Werror -g   -c -o ft_unslen.o ft_unslen.c
+ar rcs libftprintf.a ft_printf.o ft_hexa.o ft_hexa_u.o ft_intlen.o ft_pointer.o ft_putchar.o ft_putstr.o ft_unslen.o
+make: Leaving directory `/Users/anthonyreyes/Desktop/printf/myprintf'
+ 
