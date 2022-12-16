@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:58:16 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/10 18:36:48 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/16 17:32:53 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,13 @@ void	hexa_out(unsigned int n)
 	if (n == 0)
 	{
 		ft_putchar('0');
-		return;
+		return ;
 	}
 	if ((n / 16) > 0)
 	{
 		hexa_out(n / 16);
 	}
 	if ((n % 16) >= 10 && (n % 16) < 16)
-	//if ((n % 16) < 16)
 	{
 		ft_putchar((n % 16) + 87);
 	}
