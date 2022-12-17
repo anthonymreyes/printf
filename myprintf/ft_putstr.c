@@ -6,11 +6,10 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:08:45 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/09 15:11:41 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/17 12:40:06 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "ft_printf.h"
 
 int	ft_putstr(char *c)
@@ -30,9 +29,3 @@ int	ft_putstr(char *c)
 	}
 	return (i);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf ("%d\n", ft_putstr ("statement"));
-// }

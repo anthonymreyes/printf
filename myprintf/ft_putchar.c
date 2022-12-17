@@ -6,7 +6,7 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:05:30 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/07 15:57:17 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/17 12:39:52 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,3 @@ int	ft_putchar(char c)
 	write(1, &c, 1);
 	return (1);
 }
-
-// int	main(void)
-// {
-// 	ft_putchar('a');
-// }

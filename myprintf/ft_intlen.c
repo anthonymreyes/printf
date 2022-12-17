@@ -6,19 +6,11 @@
 /*   By: anreyes <anreyes@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:18:39 by anreyes           #+#    #+#             */
-/*   Updated: 2022/12/09 15:24:36 by anreyes          ###   ########.fr       */
+/*   Updated: 2022/12/17 12:39:13 by anreyes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "ft_printf.h"
-
-// int	ft_putchar(int c)
-// {
-// 	write(1, &c, 1);
-// 	return (1);
-// }
 
 void	ft_putnbr(int nb)
 {
@@ -59,8 +51,3 @@ int	ft_intlen(int i)
 	}
 	return (len);
 }
-
-// int	main(void)
-// {
-// 	printf("\n%d\n",ft_len(421));
-// }
